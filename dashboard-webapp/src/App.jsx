@@ -9,7 +9,7 @@ export default function App() {
   const [selectedModel, setSelectedModel] = useState('rf_prediction');
 
   useEffect(() => {
-    fetch('data.json')
+    fetch(`${import.meta.env.BASE_URL}data.json`)
       .then(res => res.json())
       .then(json => {
         setData(json);
